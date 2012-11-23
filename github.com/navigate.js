@@ -1,6 +1,8 @@
 var filters = [].slice.call(document.querySelectorAll('.repo_filter'));
 var input = document.querySelector('.filter-bar input');
 
+if (!filters || !input) return;
+
 //enter opens the top repo
 var elems = [];
 filters.forEach(function(a) {
