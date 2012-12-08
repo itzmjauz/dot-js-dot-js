@@ -10,6 +10,7 @@ var input = document.querySelector('.filter-bar input');
 filters.forEach(hooklink);
 
 function hooklink(a) {
+    if (a.querySelector('.plugcount')) return;
     var elem = document.createElement('span');
     elem.classList.add('plugcount');
     a.appendChild(elem);
