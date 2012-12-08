@@ -20,6 +20,7 @@ function navigate() {
         if (elems[i].style.display != 'none') break;
     }
     if (i == elems.length) return;
-    console.log(elems[i]);
-    elems[i].querySelector('a').click();
+    var elem = elems[i];
+    var a = elem.querySelector('h3 a') || elem.querySelector('a');
+    a.click();
 }
