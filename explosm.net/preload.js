@@ -8,13 +8,8 @@ require('domready')(function() {
 });
 
 function preload(url) {
-    request(url, function(err, res, body) {
-        if (err) return;
-        var imgUrl = body.match(/http:\/\/www.explosm.net\/db\/files\/Comics\/[^"]+/).toString();
-        if (!imgUrl) return;
-        var img = new Image();
-        img.src = imgUrl;
-        window._images = window._images || [];
-        window._images.push(img);
-    });
+    var iframe = document.createElement('iframe');
+    iframe.src = url;
+    iframe.style.height = iframe.style.width = '0px';
+    document.body.appendChild(iframe);
 }
