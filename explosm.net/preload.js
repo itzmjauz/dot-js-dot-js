@@ -1,3 +1,4 @@
+if (window.top !== window) return;
 var request = require('browser-request');
 require('domready')(function() {
     ['prev', 'next'].forEach(function(rel) {
