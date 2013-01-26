@@ -1,1 +1,1 @@
-if (!window.location.hash || window.location.hash == '#') window.location.hash = 'maincontent';
+if (!window.location.hash || window.location.hash == '#') window.location.hash = 'maincontent'
